@@ -1,0 +1,130 @@
+/* -------------------------------------
+   Fun Emoji Background for Kids
+-------------------------------------- */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Comic Sans MS', cursive;
+  text-align: center;
+  background: linear-gradient(270deg, #ff4ecb, #ffb347, #ffe800, #00e676, #00b0ff, #8c9eff, #e040fb);
+  background-size: 1400% 1400%;
+  animation: rainbowBackground 30s ease infinite;
+  overflow-x: hidden;
+  position: relative;
+
+  /* Emoji layers */
+  background-image:
+    linear-gradient(270deg, #ff4ecb, #ffb347, #ffe800, #00e676, #00b0ff, #8c9eff, #e040fb),
+    url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='200'><text y='50%' x='50%' text-anchor='middle' dominant-baseline='middle' font-size='30'>🎈</text></svg>"),
+    url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='200'><text y='50%' x='50%' text-anchor='middle' dominant-baseline='middle' font-size='30'>⭐</text></svg>"),
+    url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='200'><text y='50%' x='50%' text-anchor='middle' dominant-baseline='middle' font-size='30'>🤖</text></svg>"),
+    url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='200'><text y='50%' x='50%' text-anchor='middle' dominant-baseline='middle' font-size='30'>🌈</text></svg>");
+  background-repeat: no-repeat, repeat, repeat, repeat, repeat;
+  background-position: center, 0 0, 50px 50px, 100px 100px, 150px 150px;
+  background-size: cover, 100px, 150px, 120px, 160px;
+}
+
+@keyframes rainbowBackground {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+
+@keyframes floatEmojis {
+  0% { background-position: center, 0 0, 50px 50px, 100px 100px, 150px 150px; }
+  100% { background-position: center, 1000px 1000px, 1050px 1050px, 1100px 1100px, 1150px 1150px; }
+}
+
+/* -------------------------------------
+   Container Styling
+-------------------------------------- */
+.container {
+  background: rgba(255, 255, 255, 0.95);
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 25px;
+  border-radius: 25px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.1);
+  position: relative;
+  z-index: 1;
+}
+
+/* -------------------------------------
+   Input & Buttons
+-------------------------------------- */
+input[type="text"] {
+  padding: 12px;
+  font-size: 18px;
+  border: 2px solid #ff9800;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  width: 80%;
+  box-sizing: border-box;
+}
+
+button {
+  padding: 12px 20px;
+  font-size: 16px;
+  background-color: #00bcd4;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #0097a7;
+}
+
+/* -------------------------------------
+   Quiz Styling
+-------------------------------------- */
+#quiz-box, #result-box {
+  background: white;
+  padding: 20px;
+  border-radius: 15px;
+  margin-top: 20px;
+}
+
+#question {
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+
+#options button {
+  display: block;
+  width: 100%;
+  margin: 8px 0;
+  padding: 12px;
+  background-color: #4caf50;
+  font-size: 16px;
+  border-radius: 10px;
+  border: none;
+  color: white;
+}
+
+#options button:hover {
+  background-color: #388e3c;
+}
+
+/* -------------------------------------
+   Result
+-------------------------------------- */
+#result-box h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+#badge {
+  font-size: 22px;
+  margin-top: 15px;
+}
+
+/* -------------------------------------
+   Hide Utility
+-------------------------------------- */
+.hidden {
+  display: none;
+}
