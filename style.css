@@ -128,3 +128,8 @@ button:hover {
 .hidden {
   display: none;
 }
+/* Use a standard font for questions and options */
+#question, #options button {
+  font-family: Arial, sans-serif;
+}
+
